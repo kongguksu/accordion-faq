@@ -136,7 +136,8 @@
     padding-right: 0;
   }
 
-  .q.active + .answer {
+  .q1.active + .answer,
+  .q5.active + .answer {
     height: 4rem;
   }
 }
@@ -191,5 +192,11 @@
 
   .q.active + .answer {
     height: 5rem;
+  }
+
+  .q2.active + .answer,
+  .q4.active + .answer,
+  .q5.active + .answer {
+    height: 4rem;
   }
 }
