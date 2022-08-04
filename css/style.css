@@ -314,7 +314,7 @@ body {
   display: none;
 }
 
-.q.active .question p {
+.q.active .question {
   font-weight: 700;
 }
 
