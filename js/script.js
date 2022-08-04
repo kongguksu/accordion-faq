@@ -1,13 +1,8 @@
 `use strict`;
 
 // variables
-const q = document.querySelector(`.q`);
 const qs = document.querySelectorAll(`.q`);
-const btnsArrow = document.querySelectorAll(`.btn-arr`);
-const btnArrow = document.querySelector(`.btn-arr`);
-const btnIconDown = document.querySelector(`.icon-btn-down`);
 const btnsIconDown = document.querySelectorAll(`.icon-btn-down`);
-const btnIconUp = document.querySelector(`.icon-btn-up`);
 const btnsIconUp = document.querySelectorAll(`.icon-btn-up`);
 
 // function
