@@ -1,0 +1,329 @@
+/* 
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+#### Text
+
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+
+#### Gradient
+
+Background gradient:
+
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+
+### Neutral
+
+#### Text
+
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+
+#### Dividers
+
+- Light grayish blue: hsl(240, 5%, 91%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 12px
+
+### Font
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700
+
+- FONT SIZES (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+    How many team members can I invite?
+    You can invite up to 2 additional users
+    on the Free plan. There is no limit on team members for the Premium plan.
+
+    What is the maximum file upload size?
+    No more than 2GB. All files in your
+    account must fit your allotted storage space.
+    
+    How do I reset my password?
+    Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.
+    
+    Can I cancel my
+    subscription?
+    Yes! Send us a message and we’ll process your request no
+    questions asked.
+    
+    Do you provide additional support?
+    Chat and email support
+    is available 24/7. Phone lines are open during normal business hours.
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text-blue: hsl(238, 29%, 16%);
+  --prirmary-text-red: hsl(14, 88%, 65%);
+  --prirmary-bg-gradient-violet: hsl(273, 75%, 66%);
+  --prirmary-bg-gradient-blue: hsl(240, 73%, 65%);
+
+  --neutral-text-dark-blue: hsl(237, 12%, 33%);
+  --neutral-text-blue: hsl(240, 6%, 50%);
+  --neutral-dividers-blue: hsl(240, 5%, 91%);
+
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  height: 100%;
+
+  background: no-repeat
+    linear-gradient(
+      to bottom,
+      var(--prirmary-bg-gradient-violet),
+      var(--prirmary-bg-gradient-blue)
+    );
+
+  overflow-y: scroll;
+}
+
+body {
+  min-height: 100%;
+
+  background: no-repeat
+    linear-gradient(
+      to bottom,
+      var(--prirmary-bg-gradient-violet),
+      var(--prirmary-bg-gradient-blue)
+    );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1;
+
+  overflow-y: scroll;
+}
+
+/********** GENERAL **********/
+.card-container {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+
+  width: 57.5rem;
+  height: 31.9rem;
+  background-color: white;
+  border-radius: 1.4rem;
+
+  box-shadow: 0.6rem 1.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+/********** LEFT COLUMN **********/
+.left-col {
+  grid-column: 1 / 2;
+}
+
+/* OVERLAY IMAGES */
+.img-overflow-hidden {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+}
+
+.img-woman {
+  width: 29rem;
+  position: absolute;
+  top: 13.5%;
+  left: -18.5%;
+  z-index: 3;
+}
+
+.img-pattern {
+  position: absolute;
+  top: -59%;
+  left: -135%;
+  z-index: 2;
+}
+
+.img-at {
+  position: absolute;
+  top: 39%;
+  left: -10%;
+  z-index: 999;
+}
+
+/********** RIGHT COLUMN **********/
+.right-col {
+  grid-column: 2 / 3;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 3.5rem 0;
+}
+
+.right-content-container {
+  position: absolute;
+  top: 14%;
+  right: 20%;
+}
+
+/* HEADING */
+.primary-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-text-blue);
+
+  margin-bottom: 2.5rem;
+}
+
+/* ACCORDIAN */
+.accordion-container {
+  width: 22rem;
+}
+
+.accordion-panel {
+  border-bottom: solid 1px var(--neutral-dividers-blue);
+  list-style: none;
+}
+
+.q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question {
+  grid-column: 1 / 2;
+
+  border: none;
+  background-color: var(--white);
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--neutral-text-dark-blue);
+
+  margin: 1rem 0;
+  transition: all 0.2s ease;
+}
+
+.question:hover,
+.question:active {
+  cursor: pointer;
+  color: var(--prirmary-text-red);
+  text-shadow: 0 0 0.6px var(--prirmary-text-red);
+}
+
+.btn-arr {
+  grid-column: 2 / 3;
+  border: none;
+  background-color: var(--white);
+
+  padding-right: 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-arr:hover,
+.btn-arr:active {
+  cursor: pointer;
+}
+
+.icon-btn-down,
+.icon-btn-up {
+  font-size: 0.8rem;
+  color: var(--prirmary-text-red);
+
+  padding-top: 0.3rem;
+}
+
+.answer {
+  height: 0rem;
+  opacity: 0;
+  overflow: hidden;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--neutral-text-blue);
+  transition: all 0.4s ease;
+}
+
+.a-text {
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+/********** FOOTER **********/
+.footer {
+  background-color: #babebf;
+
+  padding: 0.2rem;
+  margin-top: 1.5rem;
+}
+
+.frontend-mentor:link,
+.frontend-mentor:visited,
+.twitter-link:link,
+.twitter-link:visited {
+  text-decoration: none;
+  font-weight: 700;
+  color: #c43362;
+
+  transition: color 0.3s ease;
+}
+
+.frontend-mentor:hover,
+.frontend-mentor:active,
+.twitter-link:hover,
+.twitter-link:active {
+  color: #853f84;
+}
+
+/********** ADD/REMOVE CLASS **********/
+.btn-hide {
+  display: none;
+}
+
+.q.active .question p {
+  font-weight: 700;
+}
+
+.q.active + .answer {
+  display: block;
+  height: 3rem;
+  opacity: 1;
+}
+
+.q3.active + .answer {
+  height: 4rem;
+}
